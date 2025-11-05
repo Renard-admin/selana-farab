@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Освоение Целины в Казахстане</title>
+    <title>Развитие образования и науки в Казахстане</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
@@ -13,7 +13,7 @@
             background-color: #0F172A;
         }
         .header {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://world-nan.kz/img/blogs/1765115_1610110275.jpg') center/cover no-repeat;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://cdn.pixabay.com/photo/2017/09/07/08/54/money-2724241_1280.jpg') center/cover no-repeat;
             min-height: 80vh;
             display: flex;
             align-items: center;
@@ -50,12 +50,75 @@
             background-color: #0B101B;
             color: #64748B;
         }
-
-        /* Chart styles */
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #3B82F6;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            background-color: #1E293B;
+            border: 4px solid #3B82F6;
+            border-radius: 50%;
+            top: 15px;
+            z-index: 1;
+        }
+        .left {
+            left: 0;
+        }
+        .right {
+            left: 50%;
+        }
+        .left::after {
+            right: -12px;
+        }
+        .right::after {
+            left: -12px;
+        }
+        .timeline-content {
+            padding: 20px 30px;
+            background-color: #1E293B;
+            border-radius: 6px;
+        }
         .chart-container {
             position: relative;
             width: 100%;
             height: 300px;
+        }
+        @media screen and (max-width: 768px) {
+            .timeline::after {
+                left: 31px;
+            }
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            .timeline-item::after {
+                left: 18px;
+            }
+            .right {
+                left: 0%;
+            }
         }
     </style>
 </head>
@@ -64,92 +127,168 @@
     <!-- Header Section -->
     <header class="header">
         <div class="container mx-auto px-4 py-20">
-            <h1 class="main-heading text-white mb-4">Освоение Целинных и Залежных Земель в Казахстане</h1>
+            <h1 class="main-heading text-white mb-4">Развитие образования и науки в Казахстане</h1>
             <p class="text-xl text-slate-300 max-w-2xl mx-auto">
-                Масштабный проект, изменивший облик сельского хозяйства и жизни тысяч людей. Погрузитесь в историю, факты и цифры.
+                Послевоенные годы стали периодом интенсивного развития образования и науки в Казахской ССР. Исследуйте ключевые события и достижения.
             </p>
         </div>
     </header>
 
     <main class="container mx-auto px-4 py-16">
 
+        <!-- Timeline Section -->
+        <section class="mb-16">
+            <h2 class="section-title text-center mb-8">Временная лента развития образования</h2>
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3 class="text-xl font-semibold text-amber-300">1947 год</h3>
+                        <p>Принято постановление «О мерах дальнейшего развития высшего и среднего образования в Казахской ССР»</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3 class="text-xl font-semibold text-emerald-300">1949 год</h3>
+                        <p>Приняты меры по переходу ко всеобщему 7-летнему обучению</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3 class="text-xl font-semibold text-blue-300">1959 год</h3>
+                        <p>Принят Закон «Об укреплении связи школы с жизнью и о дальнейшем развитии системы народного образования»</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3 class="text-xl font-semibold text-purple-300">С 1962/1963 учебного года</h3>
+                        <p>Переход ко всеобщему 8-летнему обязательному обучению</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3 class="text-xl font-semibold text-red-300">1966 год</h3>
+                        <p>Принято постановление «О мерах дальнейшего улучшения работы средних общеобразовательных школ»</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Introduction Section -->
         <section class="mb-16">
-            <h2 class="section-title text-center mb-8">Исторический контекст</h2>
+            <h2 class="section-title text-center mb-8">Особенности развития системы образования</h2>
             <p class="text-center max-w-3xl mx-auto text-lg text-slate-400">
-                Освоение целины началось в 1954 году по инициативе Н.С. Хрущева. Это был амбициозный проект, целью которого было быстрое увеличение производства зерна для решения продовольственных проблем. Казахстан стал ключевым регионом, где были подняты миллионы гектаров непаханых земель.
+                В послевоенные годы в культурной жизни республики наступили благоприятные изменения. Особое внимание было уделено пополнению кадров, число которых было снижено из-за Великой Отечественной войны. Без квалифицированных специалистов дальнейшее развитие образования и науки было бы невозможно.
             </p>
         </section>
 
         <!-- Infographics Section -->
         <section id="infographics" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
 
-            <!-- Card 1: Площадь освоенных земель -->
+            <!-- Card 1: Количество школ -->
             <div class="infographic-card p-6">
-                <h3 class="text-2xl font-semibold mb-4 text-amber-300">Площадь освоенных земель</h3>
-                <p class="text-slate-400 mb-2">Общая площадь земель, введенных в оборот в Казахской ССР.</p>
+                <h3 class="text-2xl font-semibold mb-4 text-amber-300">Количество школ</h3>
+                <p class="text-slate-400 mb-2">Общеобразовательные школы в республике к 1950 году</p>
                 <div class="text-center">
-                    <p class="text-5xl font-bold text-amber-500 my-4">25,5 млн</p>
-                    <span class="text-2xl text-slate-400">гектаров</span>
+                    <p class="text-5xl font-bold text-amber-500 my-4">9,088</p>
+                    <span class="text-2xl text-slate-400">школ</span>
                 </div>
                 <p class="mt-4 text-sm text-slate-500">
-                    Это около 10% от всей площади пахотных земель СССР.
+                    С контингентом в 1 млн 439 тысяч учащихся.
                 </p>
             </div>
 
-            <!-- Card 2: Количество переселенцев -->
+            <!-- Card 2: Учителя с высшим образованием -->
             <div class="infographic-card p-6">
-                <h3 class="text-2xl font-semibold mb-4 text-emerald-300">Количество переселенцев</h3>
-                <p class="text-slate-400 mb-2">Люди, прибывшие со всего Советского Союза.</p>
+                <h3 class="text-2xl font-semibold mb-4 text-emerald-300">Учителя с высшим образованием</h3>
+                <p class="text-slate-400 mb-2">Рост квалификации педагогических кадров</p>
                 <div class="text-center">
-                    <p class="text-5xl font-bold text-emerald-500 my-4">2 млн+</p>
-                    <span class="text-2xl text-slate-400">человек</span>
+                    <p class="text-5xl font-bold text-emerald-500 my-4">15% → 58%</p>
+                    <span class="text-2xl text-slate-400">1954-1979 гг.</span>
                 </div>
                 <p class="mt-4 text-sm text-slate-500">
-                    В основном молодежь и специалисты, внесшие свой вклад в развитие региона.
+                    В 1954-1955 году только 15% учителей имели высшее образование, а в 1979 году - уже 58%.
                 </p>
             </div>
 
-            <!-- Card 3: Производство зерна (Инфографика) -->
+            <!-- Card 3: Бюджет на образование -->
             <div class="infographic-card p-6">
-                <h3 class="text-2xl font-semibold mb-4 text-blue-300">Производство зерна</h3>
-                <p class="text-slate-400 mb-4">Рост производства в первые годы.</p>
+                <h3 class="text-2xl font-semibold mb-4 text-blue-300">Бюджет на образование</h3>
+                <p class="text-slate-400 mb-4">Рост финансирования школьного образования</p>
                 <div class="chart-container">
-                    <canvas id="grainChart"></canvas>
+                    <canvas id="budgetChart"></canvas>
                 </div>
             </div>
 
-            <!-- Card 4: Строительство (Инфографика) -->
+            <!-- Card 4: Научные учреждения -->
             <div class="infographic-card p-6 col-span-1 md:col-span-2 lg:col-span-3">
-                <h3 class="text-2xl font-semibold mb-4 text-red-400">Новые населенные пункты</h3>
-                <p class="text-slate-400 mb-4">Количество основанных совхозов и городов.</p>
+                <h3 class="text-2xl font-semibold mb-4 text-purple-400">Научные учреждения АН Казахской ССР</h3>
+                <p class="text-slate-400 mb-4">К концу 1950 года в системе Академии наук Казахской ССР</p>
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
                     <div>
-                        <p class="text-5xl font-bold text-red-500">300+</p>
-                        <p class="text-xl text-slate-400">Совхозов</p>
+                        <p class="text-5xl font-bold text-purple-500">19</p>
+                        <p class="text-xl text-slate-400">Институтов</p>
                     </div>
                     <div>
-                        <p class="text-5xl font-bold text-red-500">7</p>
-                        <p class="text-xl text-slate-400">Новых городов</p>
+                        <p class="text-5xl font-bold text-purple-500">13</p>
+                        <p class="text-xl text-slate-400">Секторов</p>
                     </div>
                     <div>
-                        <p class="text-5xl font-bold text-red-500">2000+</p>
-                        <p class="text-xl text-slate-400">Поселков</p>
+                        <p class="text-5xl font-bold text-purple-500">2</p>
+                        <p class="text-xl text-slate-400">Музея</p>
                     </div>
                     <div>
-                        <p class="text-5xl font-bold text-red-500">1000+</p>
-                        <p class="text-xl text-slate-400">Школ</p>
+                        <p class="text-5xl font-bold text-purple-500">50</p>
+                        <p class="text-xl text-slate-400">Всего учреждений</p>
                     </div>
                 </div>
             </div>
 
         </section>
 
+        <!-- Science Section -->
+        <section class="mb-16">
+            <h2 class="section-title text-center mb-8">Развитие науки в Казахстане</h2>
+            <div class="max-w-3xl mx-auto text-lg text-slate-400">
+                <p class="mb-4">
+                    Со второй половины XX века поступательными движениями начал расти научный потенциал Казахстана. Большим событием в культурной жизни республики стало открытие в мае 1946 года Академии наук (АН) Казахской ССР на базе Казахского филиала АН СССР.
+                </p>
+                <p class="mb-4">
+                    Выдающийся ученый Каныш Сатпаев стал ее первым президентом. Особое место в науке Казахстана занимает К.И. Сатпаев. За многолетний труд «Рудные месторождения Джезказганского района Казахской ССР», в 1942 г. К. Сатпаев был удостоен Государственной премии СССР.
+                </p>
+                <p>
+                    В послевоенные годы при участии ученых Казахстана были исследованы многие месторождения полезных ископаемых. Открытие и разработка новых месторождений цветных металлов оказали влияние на дальнейшее развитие естественных наук.
+                </p>
+            </div>
+        </section>
+
+        <!-- Scientists Section -->
+        <section class="mb-16">
+            <h2 class="section-title text-center mb-8">Выдающиеся ученые Казахстана</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="infographic-card p-6 text-center">
+                    <h3 class="text-xl font-semibold mb-2 text-amber-300">Д. Сокольский</h3>
+                    <p class="text-slate-400">Поднимал проблемы изучения катализаторов электрохимическими способами</p>
+                </div>
+                <div class="infographic-card p-6 text-center">
+                    <h3 class="text-xl font-semibold mb-2 text-emerald-300">У. Ахметсафин</h3>
+                    <p class="text-slate-400">Плодотворно работал в гидрогеологии и гидрофизике</p>
+                </div>
+                <div class="infographic-card p-6 text-center">
+                    <h3 class="text-xl font-semibold mb-2 text-blue-300">М. Айтхожин</h3>
+                    <p class="text-slate-400">Добился успехов в генетике и микробиологии. Открыл информосомы в клетках растений</p>
+                </div>
+                <div class="infographic-card p-6 text-center">
+                    <h3 class="text-xl font-semibold mb-2 text-purple-300">А. Бараев</h3>
+                    <p class="text-slate-400">Проводил исследование, разработал новые системы сбережения почв</p>
+                </div>
+            </div>
+        </section>
+
         <!-- Conclusion Section -->
         <section class="text-center max-w-3xl mx-auto">
             <h2 class="section-title mb-8">Наследие и вызовы</h2>
             <p class="text-lg text-slate-400 mb-4">
-                Освоение целины имело как позитивные, так и негативные последствия. Оно привело к резкому росту производства зерна, но также вызвало экологические проблемы, такие как эрозия почв. Сегодня эти земли остаются важным сельскохозяйственным регионом Казахстана.
+                Развитие образования и науки в послевоенные годы имело как значительные достижения, так и определенные проблемы. С одной стороны, наблюдался рост числа образовательных учреждений, увеличение финансирования и расширение научных исследований. С другой стороны, сохранялись проблемы с казахскими школами, которые находились в трудном положении, а также идеологические ограничения в общественных науках.
             </p>
         </section>
 
@@ -172,17 +311,17 @@
     <!-- JavaScript for Chart.js and random facts -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
-        // Grain Production Chart
-        const grainCtx = document.getElementById('grainChart').getContext('2d');
-        const grainChart = new Chart(grainCtx, {
+        // Budget Chart
+        const budgetCtx = document.getElementById('budgetChart').getContext('2d');
+        const budgetChart = new Chart(budgetCtx, {
             type: 'bar',
             data: {
-                labels: ['1954', '1956', '1958', '1960'],
+                labels: ['1946', '1950'],
                 datasets: [{
-                    label: 'Сбор зерна (млн тонн)',
-                    data: [4.4, 16.2, 23.9, 14.8],
-                    backgroundColor: ['rgba(59, 130, 246, 0.6)', 'rgba(34, 197, 94, 0.6)', 'rgba(239, 68, 68, 0.6)', 'rgba(245, 158, 11, 0.6)'],
-                    borderColor: ['rgba(59, 130, 246, 1)', 'rgba(34, 197, 94, 1)', 'rgba(239, 68, 68, 1)', 'rgba(245, 158, 11, 1)'],
+                    label: 'Бюджет (млн рублей)',
+                    data: [85.6, 146.5],
+                    backgroundColor: ['rgba(59, 130, 246, 0.6)', 'rgba(34, 197, 94, 0.6)'],
+                    borderColor: ['rgba(59, 130, 246, 1)', 'rgba(34, 197, 94, 1)'],
                     borderWidth: 1
                 }]
             },
@@ -220,24 +359,23 @@
 
         // Did You Know? Facts
         const facts = [
-            "Казахстан был основным регионом освоения целины, на него пришлось более 50% всех поднятых земель СССР.",
-            "Первые целинники ехали в вагонах-теплушках и жили в палатках, землянках и даже в приспособленных сараях.",
-            "Освоение целины стало одной из самых массовых миграций в истории СССР.",
-            "В целинные районы Казахстана приезжали студенты, солдаты и молодые специалисты со всего Советского Союза.",
-            "Один из символов целины — первый трактор, который часто изображали на плакатах.",
-            "В 1956 году, в год «целинного урожая», Казахстан собрал рекордные 16,2 млн тонн зерна.",
-            "Для освоения целины было создано около 300 новых совхозов.",
-            "Среди целинников было много женщин-трактористов и комбайнеров, которые стали героями труда.",
-            "Освоение целины привело к резкому росту населения в северных областях Казахстана.",
-            "Целина стала темой множества фильмов, песен и книг, воспевающих подвиг советского народа.",
-            "В результате освоения целины были построены тысячи километров новых дорог и железнодорожных путей.",
-            "Эрозия почв стала серьезной экологической проблемой, с которой столкнулись после начала освоения целины.",
-            "Для обеспечения целинников водой было построено несколько водохранилищ и каналов.",
-            "Город Целиноград (ныне Астана) получил свое название в честь целинной кампании.",
-            "Освоение целины оказало влияние на казахскую культуру, изменив традиционный уклад жизни в степных районах."
+            "В 1946 году на школьное образование было выделено 85,6 млн рублей, а в 1950 году - уже 146,5 млн рублей.",
+            "К 1953 году в интернатных учреждениях Казахстана училось около 40 тыс. детей.",
+            "В 1950 году в республике функционировало 9088 общеобразовательных школ с контингентом в 1 млн 439 тысяч учащихся.",
+            "В 1959 году для централизации управления вузами был образован государственный комитет, преобразованный затем в Министерство высшего и среднего специального образования Казахстана.",
+            "В начале 80-х годов общее среднее образование приобрело обязательный характер.",
+            "В 1984 году в школьной реформе внимание сосредоточилось на качестве материально-технической базы, дети стали ходить в 1-й класс с 6 лет.",
+            "Во второй половине XX века в Казахстане преобладали школы с русским языком обучения.",
+            "До 1970 года в Казахстане всеобщее образование было 8-летним.",
+            "Переход к общему среднему образованию начался в 70-е годы XX века.",
+            "О полном осуществлении обязательного общего среднего образования было объявлено в начале 80-х годов.",
+            "Академия наук Казахской ССР была открыта в мае 1946 года на базе Казахского филиала АН СССР.",
+            "Выдающийся ученый Каныш Сатпаев стал первым президентом Академии наук Казахстана.",
+            "К концу 1950 года в системе Академии наук Казахской ССР действовало уже 50 научно-исследовательских учреждений.",
+            "В послевоенные годы ученые Казахстана вышли на передний план мировой науки по математике, механике, квантовой электронике и другим направлениям.",
+            "На рубеже 1970-1980-х гг. были написаны многотомные фундаментальные исследования по истории, филологии, зоологии, ботанике, географии Казахстана."
         ];
         
-        // This is a short list for demonstration. You can expand it to 50 facts.
         const factDisplay = document.getElementById('fact-display');
 
         function showRandomFact() {
