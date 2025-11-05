@@ -3,385 +3,530 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Развитие образования и науки в Казахстане</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>История Казахстана в годы перестройки</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-        body {
-            font-family: 'Inter', sans-serif;
-            color: #E2E8F0;
-            background-color: #0F172A;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        .header {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://cdn.pixabay.com/photo/2017/09/07/08/54/money-2724241_1280.jpg') center/cover no-repeat;
-            min-height: 80vh;
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #0a0a16;
+            color: #f0f0f0;
+            overflow-x: hidden;
+        }
+
+        .parallax-container {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
-            text-align: center;
         }
-        .section-title {
-            color: #A3A3A3;
-            font-size: 1.5rem;
-            font-weight: 500;
+
+        .parallax-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 120%;
+            background: linear-gradient(rgba(10, 10, 22, 0.8), rgba(10, 10, 22, 0.9)), 
+                        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%231a1a2e"/><path d="M0 0L100 100M100 0L0 100" stroke="%23162b4d" stroke-width="1"/></svg>');
+            background-size: cover;
+            background-position: center;
+            transform: translateZ(-1px) scale(2);
+            z-index: -1;
         }
-        .main-heading {
-            font-size: 3rem;
-            font-weight: 700;
-            line-height: 1.2;
-        }
-        .infographic-card {
-            background-color: #1E293B;
-            border-radius: 1rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out;
-        }
-        .infographic-card:hover {
-            transform: translateY(-5px);
-        }
-        .graph-label {
-            color: #A3A3A3;
-        }
-        .data-value {
-            color: #F87171;
-            font-weight: 600;
-        }
-        .footer {
-            background-color: #0B101B;
-            color: #64748B;
-        }
-        .timeline {
-            position: relative;
+
+        .content {
             max-width: 1200px;
             margin: 0 auto;
+            padding: 100px 20px;
+            position: relative;
+            z-index: 2;
         }
+
+        .section {
+            background: rgba(26, 26, 46, 0.7);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 60px;
+            margin: 80px 0;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            transform-style: preserve-3d;
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+            border: 1px solid rgba(64, 224, 208, 0.1);
+        }
+
+        .section:hover {
+            transform: translateY(-10px) rotateX(5deg);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        h1, h2, h3 {
+            color: #40e0d0;
+            margin-bottom: 30px;
+            text-shadow: 0 2px 10px rgba(64, 224, 208, 0.3);
+        }
+
+        h1 {
+            font-size: 4rem;
+            text-align: center;
+            margin-bottom: 20px;
+            letter-spacing: 3px;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            border-bottom: 2px solid #40e0d0;
+            padding-bottom: 15px;
+            margin-top: 50px;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            margin-top: 40px;
+        }
+
+        p {
+            line-height: 1.8;
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+        }
+
+        .hero-content {
+            text-align: center;
+            z-index: 10;
+            position: relative;
+            padding: 40px;
+            background: rgba(26, 26, 46, 0.7);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(64, 224, 208, 0.2);
+            transform: translateZ(20px);
+            max-width: 800px;
+        }
+
+        .keywords-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background: rgba(22, 43, 77, 0.5);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .keywords-table th, .keywords-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid rgba(64, 224, 208, 0.2);
+        }
+
+        .keywords-table th {
+            background: rgba(64, 224, 208, 0.1);
+            color: #40e0d0;
+            font-weight: 600;
+        }
+
+        .keywords-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .assignment-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background: rgba(22, 43, 77, 0.5);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .assignment-table th, .assignment-table td {
+            padding: 15px;
+            text-align: left;
+            border: 1px solid rgba(64, 224, 208, 0.2);
+        }
+
+        .assignment-table th {
+            background: rgba(64, 224, 208, 0.1);
+            color: #40e0d0;
+            font-weight: 600;
+        }
+
+        .floating-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        .floating-element {
+            position: absolute;
+            background: rgba(64, 224, 208, 0.1);
+            border-radius: 50%;
+            animation: float 15s infinite ease-in-out;
+        }
+
+        .floating-element:nth-child(1) {
+            width: 100px;
+            height: 100px;
+            top: 10%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .floating-element:nth-child(2) {
+            width: 150px;
+            height: 150px;
+            top: 60%;
+            left: 80%;
+            animation-delay: 2s;
+        }
+
+        .floating-element:nth-child(3) {
+            width: 70px;
+            height: 70px;
+            top: 80%;
+            left: 20%;
+            animation-delay: 4s;
+        }
+
+        .floating-element:nth-child(4) {
+            width: 120px;
+            height: 120px;
+            top: 30%;
+            left: 70%;
+            animation-delay: 6s;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+            33% {
+                transform: translateY(-30px) rotate(120deg);
+            }
+            66% {
+                transform: translateY(20px) rotate(240deg);
+            }
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #40e0d0;
+            font-size: 1.2rem;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0) translateX(-50%);
+            }
+            40% {
+                transform: translateY(-20px) translateX(-50%);
+            }
+            60% {
+                transform: translateY(-10px) translateX(-50%);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 50px auto;
+        }
+
         .timeline::after {
             content: '';
             position: absolute;
             width: 6px;
-            background-color: #3B82F6;
+            background: #40e0d0;
             top: 0;
             bottom: 0;
             left: 50%;
             margin-left: -3px;
+            border-radius: 10px;
         }
+
         .timeline-item {
             padding: 10px 40px;
             position: relative;
             width: 50%;
             box-sizing: border-box;
         }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+
+        .timeline-content {
+            padding: 20px 30px;
+            background: rgba(26, 26, 46, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(64, 224, 208, 0.2);
+        }
+
         .timeline-item::after {
             content: '';
             position: absolute;
             width: 25px;
             height: 25px;
-            background-color: #1E293B;
-            border: 4px solid #3B82F6;
-            border-radius: 50%;
+            background: #40e0d0;
+            border: 4px solid #0a0a16;
             top: 15px;
+            border-radius: 50%;
             z-index: 1;
         }
-        .left {
-            left: 0;
-        }
-        .right {
-            left: 50%;
-        }
-        .left::after {
+
+        .timeline-item:nth-child(odd)::after {
             right: -12px;
         }
-        .right::after {
+
+        .timeline-item:nth-child(even)::after {
             left: -12px;
         }
-        .timeline-content {
-            padding: 20px 30px;
-            background-color: #1E293B;
-            border-radius: 6px;
-        }
-        .chart-container {
-            position: relative;
-            width: 100%;
-            height: 300px;
-        }
+
         @media screen and (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .section {
+                padding: 30px;
+            }
+            
             .timeline::after {
                 left: 31px;
             }
+            
             .timeline-item {
                 width: 100%;
                 padding-left: 70px;
                 padding-right: 25px;
             }
+            
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+            
             .timeline-item::after {
                 left: 18px;
             }
-            .right {
-                left: 0%;
+            
+            .timeline-item:nth-child(odd)::after {
+                right: auto;
             }
         }
     </style>
 </head>
-<body class="bg-slate-900 text-slate-200">
-
-    <!-- Header Section -->
-    <header class="header">
-        <div class="container mx-auto px-4 py-20">
-            <h1 class="main-heading text-white mb-4">Развитие образования и науки в Казахстане</h1>
-            <p class="text-xl text-slate-300 max-w-2xl mx-auto">
-                Послевоенные годы стали периодом интенсивного развития образования и науки в Казахской ССР. Исследуйте ключевые события и достижения.
-            </p>
+<body>
+    <div class="parallax-container" id="hero">
+        <div class="parallax-bg"></div>
+        <div class="floating-elements">
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
         </div>
-    </header>
-
-    <main class="container mx-auto px-4 py-16">
-
-        <!-- Timeline Section -->
-        <section class="mb-16">
-            <h2 class="section-title text-center mb-8">Временная лента развития образования</h2>
-            <div class="timeline">
-                <div class="timeline-item left">
-                    <div class="timeline-content">
-                        <h3 class="text-xl font-semibold text-amber-300">1947 год</h3>
-                        <p>Принято постановление «О мерах дальнейшего развития высшего и среднего образования в Казахской ССР»</p>
-                    </div>
-                </div>
-                <div class="timeline-item right">
-                    <div class="timeline-content">
-                        <h3 class="text-xl font-semibold text-emerald-300">1949 год</h3>
-                        <p>Приняты меры по переходу ко всеобщему 7-летнему обучению</p>
-                    </div>
-                </div>
-                <div class="timeline-item left">
-                    <div class="timeline-content">
-                        <h3 class="text-xl font-semibold text-blue-300">1959 год</h3>
-                        <p>Принят Закон «Об укреплении связи школы с жизнью и о дальнейшем развитии системы народного образования»</p>
-                    </div>
-                </div>
-                <div class="timeline-item right">
-                    <div class="timeline-content">
-                        <h3 class="text-xl font-semibold text-purple-300">С 1962/1963 учебного года</h3>
-                        <p>Переход ко всеобщему 8-летнему обязательному обучению</p>
-                    </div>
-                </div>
-                <div class="timeline-item left">
-                    <div class="timeline-content">
-                        <h3 class="text-xl font-semibold text-red-300">1966 год</h3>
-                        <p>Принято постановление «О мерах дальнейшего улучшения работы средних общеобразовательных школ»</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Introduction Section -->
-        <section class="mb-16">
-            <h2 class="section-title text-center mb-8">Особенности развития системы образования</h2>
-            <p class="text-center max-w-3xl mx-auto text-lg text-slate-400">
-                В послевоенные годы в культурной жизни республики наступили благоприятные изменения. Особое внимание было уделено пополнению кадров, число которых было снижено из-за Великой Отечественной войны. Без квалифицированных специалистов дальнейшее развитие образования и науки было бы невозможно.
-            </p>
-        </section>
-
-        <!-- Infographics Section -->
-        <section id="infographics" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-
-            <!-- Card 1: Количество школ -->
-            <div class="infographic-card p-6">
-                <h3 class="text-2xl font-semibold mb-4 text-amber-300">Количество школ</h3>
-                <p class="text-slate-400 mb-2">Общеобразовательные школы в республике к 1950 году</p>
-                <div class="text-center">
-                    <p class="text-5xl font-bold text-amber-500 my-4">9,088</p>
-                    <span class="text-2xl text-slate-400">школ</span>
-                </div>
-                <p class="mt-4 text-sm text-slate-500">
-                    С контингентом в 1 млн 439 тысяч учащихся.
-                </p>
-            </div>
-
-            <!-- Card 2: Учителя с высшим образованием -->
-            <div class="infographic-card p-6">
-                <h3 class="text-2xl font-semibold mb-4 text-emerald-300">Учителя с высшим образованием</h3>
-                <p class="text-slate-400 mb-2">Рост квалификации педагогических кадров</p>
-                <div class="text-center">
-                    <p class="text-5xl font-bold text-emerald-500 my-4">15% → 58%</p>
-                    <span class="text-2xl text-slate-400">1954-1979 гг.</span>
-                </div>
-                <p class="mt-4 text-sm text-slate-500">
-                    В 1954-1955 году только 15% учителей имели высшее образование, а в 1979 году - уже 58%.
-                </p>
-            </div>
-
-            <!-- Card 3: Бюджет на образование -->
-            <div class="infographic-card p-6">
-                <h3 class="text-2xl font-semibold mb-4 text-blue-300">Бюджет на образование</h3>
-                <p class="text-slate-400 mb-4">Рост финансирования школьного образования</p>
-                <div class="chart-container">
-                    <canvas id="budgetChart"></canvas>
-                </div>
-            </div>
-
-            <!-- Card 4: Научные учреждения -->
-            <div class="infographic-card p-6 col-span-1 md:col-span-2 lg:col-span-3">
-                <h3 class="text-2xl font-semibold mb-4 text-purple-400">Научные учреждения АН Казахской ССР</h3>
-                <p class="text-slate-400 mb-4">К концу 1950 года в системе Академии наук Казахской ССР</p>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-                    <div>
-                        <p class="text-5xl font-bold text-purple-500">19</p>
-                        <p class="text-xl text-slate-400">Институтов</p>
-                    </div>
-                    <div>
-                        <p class="text-5xl font-bold text-purple-500">13</p>
-                        <p class="text-xl text-slate-400">Секторов</p>
-                    </div>
-                    <div>
-                        <p class="text-5xl font-bold text-purple-500">2</p>
-                        <p class="text-xl text-slate-400">Музея</p>
-                    </div>
-                    <div>
-                        <p class="text-5xl font-bold text-purple-500">50</p>
-                        <p class="text-xl text-slate-400">Всего учреждений</p>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-
-        <!-- Science Section -->
-        <section class="mb-16">
-            <h2 class="section-title text-center mb-8">Развитие науки в Казахстане</h2>
-            <div class="max-w-3xl mx-auto text-lg text-slate-400">
-                <p class="mb-4">
-                    Со второй половины XX века поступательными движениями начал расти научный потенциал Казахстана. Большим событием в культурной жизни республики стало открытие в мае 1946 года Академии наук (АН) Казахской ССР на базе Казахского филиала АН СССР.
-                </p>
-                <p class="mb-4">
-                    Выдающийся ученый Каныш Сатпаев стал ее первым президентом. Особое место в науке Казахстана занимает К.И. Сатпаев. За многолетний труд «Рудные месторождения Джезказганского района Казахской ССР», в 1942 г. К. Сатпаев был удостоен Государственной премии СССР.
-                </p>
-                <p>
-                    В послевоенные годы при участии ученых Казахстана были исследованы многие месторождения полезных ископаемых. Открытие и разработка новых месторождений цветных металлов оказали влияние на дальнейшее развитие естественных наук.
-                </p>
-            </div>
-        </section>
-
-        <!-- Scientists Section -->
-        <section class="mb-16">
-            <h2 class="section-title text-center mb-8">Выдающиеся ученые Казахстана</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="infographic-card p-6 text-center">
-                    <h3 class="text-xl font-semibold mb-2 text-amber-300">Д. Сокольский</h3>
-                    <p class="text-slate-400">Поднимал проблемы изучения катализаторов электрохимическими способами</p>
-                </div>
-                <div class="infographic-card p-6 text-center">
-                    <h3 class="text-xl font-semibold mb-2 text-emerald-300">У. Ахметсафин</h3>
-                    <p class="text-slate-400">Плодотворно работал в гидрогеологии и гидрофизике</p>
-                </div>
-                <div class="infographic-card p-6 text-center">
-                    <h3 class="text-xl font-semibold mb-2 text-blue-300">М. Айтхожин</h3>
-                    <p class="text-slate-400">Добился успехов в генетике и микробиологии. Открыл информосомы в клетках растений</p>
-                </div>
-                <div class="infographic-card p-6 text-center">
-                    <h3 class="text-xl font-semibold mb-2 text-purple-300">А. Бараев</h3>
-                    <p class="text-slate-400">Проводил исследование, разработал новые системы сбережения почв</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Conclusion Section -->
-        <section class="text-center max-w-3xl mx-auto">
-            <h2 class="section-title mb-8">Наследие и вызовы</h2>
-            <p class="text-lg text-slate-400 mb-4">
-                Развитие образования и науки в послевоенные годы имело как значительные достижения, так и определенные проблемы. С одной стороны, наблюдался рост числа образовательных учреждений, увеличение финансирования и расширение научных исследований. С другой стороны, сохранялись проблемы с казахскими школами, которые находились в трудном положении, а также идеологические ограничения в общественных науках.
-            </p>
-        </section>
-
-    </main>
-    
-    <!-- Fact section and Team names -->
-    <div class="container mx-auto px-4 py-8 text-center">
-        <button onclick="showRandomFact()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full transition-all duration-300">
-            А вы знали?
-        </button>
-        <p id="fact-display" class="mt-4 text-lg italic text-slate-400 min-h-[4rem]"></p>
-        <p class="mt-8 text-sm text-slate-500"></p>
+        <div class="hero-content fade-in">
+            <h1>РАЗДЕЛ V</h1>
+            <h2>КАЗАХСТАН В ГОДЫ ПЕРЕСТРОЙКИ (1986–1991 годы)</h2>
+            <p>§13. Казахстан на начальном этапе перестройки</p>
+        </div>
+        <div class="scroll-indicator">↓ Прокрутите вниз ↓</div>
     </div>
 
-    <!-- Footer -->
-    <footer class="footer text-center p-8">
-        <p>Участники команды: Нурай, Карина и Аиша</p>
-    </footer>
+    <div class="content">
+        <section class="section fade-in">
+            <h2>Исследовательский вопрос</h2>
+            <p>Распад Советского Союза: закономерность или случайность?</p>
+            
+            <h3>На этом уроке:</h3>
+            <ul>
+                <li>Объясним особенности общественно-политической жизни, дадим собственную интерпретацию.</li>
+                <li>Проанализируем социально-экономические проблемы, имевшие место в конце XX века.</li>
+            </ul>
+            
+            <h3>Ключевые слова:</h3>
+            <table class="keywords-table">
+                <tr>
+                    <th>Русский</th>
+                    <th>Английский</th>
+                </tr>
+                <tr>
+                    <td>XXVII съезд КПСС;</td>
+                    <td>XXVII congress of the CPSU;</td>
+                </tr>
+                <tr>
+                    <td>ускорение социально-экономического развития;</td>
+                    <td>acceleration of socio-economic development;</td>
+                </tr>
+                <tr>
+                    <td>обновление общества;</td>
+                    <td>social modernization;</td>
+                </tr>
+                <tr>
+                    <td>меры демократизации;</td>
+                    <td>democratization measures;</td>
+                </tr>
+                <tr>
+                    <td>пленум;</td>
+                    <td>plenum;</td>
+                </tr>
+                <tr>
+                    <td>кадровая политика</td>
+                    <td>human resources policy</td>
+                </tr>
+            </table>
+            
+            <p><strong>Пленум</strong> (лат. plenum – полный) – 1) собрание в полном составе членов выборного руководящего органа какой-либо организации; 2) заседание всех членов органов Верховного суда.</p>
+            
+            <h3>ИНТЕГРАЦИЯ:</h3>
+            <p>по предмету география – экономическая география. Социально-экономические ресурсы. По всемирной истории – биполярный мир. Гонка вооружений. Основные события «холодной войны». Причины неудачи реформирования советской экономики. По основам права – правовое государство и гражданское общество. Права и свободы человека и гражданина.</p>
+        </section>
 
-    <!-- JavaScript for Chart.js and random facts -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <section class="section fade-in">
+            <h2>Изменения в общественно-экономической жизни страны в 80-е годы XX века</h2>
+            <p>К началу 80-х годов практически во всех республиках Советского Союза сложилось тяжелое социально-экономическое положение. Политическая организация общества, не оправдавшая себя система экономических отношений вплотную поставили страну перед серьезным кризисом. В марте 1985 года лидером Коммунистической партии и Советского государства стал М. С. Горбачев. На состоявшемся в апреле 1985 г. Пленуме ЦК КПСС была предпринята попытка по-новому рассмотреть вопросы социально-экономической жизни. Был провозглашен курс на ускорение социально-экономического развития. Политруководство планировало провести ускоренное развитие без снижения темпов экономического роста и за счет сосредоточения основных усилий в данном направлении.</p>
+            
+            <p>Взятый курс был одобрен в ходе состоявшегося в феврале 1986 года XXVII съезда КПСС. Партия объявляла себя реальной силой, способной повести за собой общество по пути обновления. В эти годы все еще сохранялись применение прежних способов решения многих сложных проблем общественно-экономической жизни. Поэтому апрельский Пленум (1985), взявший курс на ускорение социально-экономического развития, как и последующие пленумы и съезды КПСС, не могли спасти и не спасли Советский Союз от назревающего глубокого кризиса.</p>
+            
+            <p>Последующие события показали, что курс на ускорение принимался без четкой и ясной программы, обдуманных научных концепций. На январском Пленуме ЦК КПСС (1987), который рассматривал проблему «О перестройке и кадровой политике партии», было объявлено, что главной целью партии и всего общества является перестройка. Перестройка, как и курс на ускорение, привела лишь к торжеству таких механических лозунгов, как «да здравствует демократия», «да здравствует законность и порядок» и др. Между тем застой в народном хозяйстве был следствием противоречий и ошибок командно-административной системы.</p>
+            
+            <p>Начатый с апреля 1985 года исторический перелом нелегко давался и воспитанных на коммунистическом духе людях. Процесс ревизии и реконструкции в Казахстане столкнулся со многими проблемами и препятствиями как и в других регионах страны.</p>
+        </section>
+
+        <section class="section fade-in">
+            <h2>Вопросы и задания</h2>
+            
+            <h3>Вопросы:</h3>
+            <ul>
+                <li>На каком пленуме ЦК КПСС был объявлен курс на ускорение социально-экономического развития?</li>
+                <li>Каково было социально-экономическое положение Казахстана в 80-е годы?</li>
+                <li>Что явилось источником торможения для обновления общества?</li>
+            </ul>
+            
+            <h3>Задание 1.</h3>
+            <p>Определите и сделайте заключение о расхождениях в словах и делах в годы застоя, заполните сравнительную таблицу.</p>
+            
+            <table class="assignment-table">
+                <tr>
+                    <th>В политике</th>
+                    <th>В социальной сфере</th>
+                    <th>Итоги</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            
+            <h3>Задание 2. Работа с документом.</h3>
+            <ul>
+                <li>Почему не был выполнен курс на ускорение социально-экономического развития, озвученный на апрельском Пленуме ЦК КПСС?</li>
+                <li>Каковы причины начала периода «перестройки»?</li>
+                <li>Каковы признаки (политические, экономические, социальные) кризиса 80-х годов?</li>
+                <li>Выскажите свои мысли по решению проблем 80-х годов XX века, используя факты и источники.</li>
+            </ul>
+        </section>
+
+        <section class="section fade-in">
+            <h2>Фактологический материал (документ)</h2>
+            <h3>Апрель 1985 года – Пленум ЦК КПСС и начало перестройки</h3>
+            
+            <p>В середине 80-х годов Советский Союз стоял перед экономическим, социальным и политическим кризисом. Назрела необходимость полного обновления общества – его экономических основ, социальной жизни, политической структуры, духовной сферы. Однако недостаточно были разъяснены пути, формы, глубина обновлений. Сформировавшиеся экономические формы, организационно-политическая структура общества препятствовали решению назревших противоречий. СССР нуждался в новой концепции развития.</p>
+            
+            <p>11 марта 1985 года состоялся внеочередной Пленум ЦК КПСС, на котором рассматривался вопрос избрания Генерального секретаря ЦК КПСС. Немного спустя апрельский Пленум ЦК КПСС, прошедший в апреле 1985 года, пересмотрел многие проблемы общественно-экономической жизни. Был объявлен курс на ускорение социально-экономического развития СССР. Политическое руководство страны предположило, что через ликвидацию отсталости отечественного машиностроения можно решить многие проблемы, повысить темпы экономического развития. За короткие сроки, сосредоточивая в этом направлении все усилия, предполагалось вывести советскую экономику на новые рубежи, затем улучшить социальные факторы, а именно – бытовые условия советских людей. Более того, рассматривались совершенствование структуры управления народным хозяйством, стимулирование новых форм труда. Таким образом, многие сложные проблемы общественно-экономической жизни, как и прежде, решались с помощью старых воззрений.</p>
+            
+            <p>Курс на ускорение социально-экономического развития проводился без четких и ясных программ, научно обоснованных концепций. Поэтому понять, почему решения апрельского Пленума ЦК КПСС не смогли вывести страну из нависшего кризиса. Вина за неудачное окончание курса на ускорение легла на плечи отдельных руководителей-коммунистов.</p>
+            
+            <p>Выступая на апрельском Пленуме ЦК КПСС, Генсек М. С. Горбачев внес новые элементы оценки ситуации в мире.</p>
+            
+            <p><em>Источник: Қазақтар. 9 томдық анықтамалық. 1-том. – Алматы. 2003, стр. 135–136.</em></p>
+        </section>
+    </div>
+
     <script>
-        // Budget Chart
-        const budgetCtx = document.getElementById('budgetChart').getContext('2d');
-        const budgetChart = new Chart(budgetCtx, {
-            type: 'bar',
-            data: {
-                labels: ['1946', '1950'],
-                datasets: [{
-                    label: 'Бюджет (млн тг)',
-                    data: [85.6, 146.5],
-                    backgroundColor: ['rgba(59, 130, 246, 0.6)', 'rgba(34, 197, 94, 0.6)'],
-                    borderColor: ['rgba(59, 130, 246, 1)', 'rgba(34, 197, 94, 1)'],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        grid: {
-                            color: 'rgba(255, 255, 255, 0.1)'
-                        },
-                        ticks: {
-                            color: '#A3A3A3'
-                        }
-                    },
-                    x: {
-                        grid: {
-                            color: 'rgba(255, 255, 255, 0.1)'
-                        },
-                        ticks: {
-                            color: '#A3A3A3'
-                        }
-                    }
-                },
-                plugins: {
-                    legend: {
-                        labels: {
-                            color: '#E2E8F0'
-                        }
-                    }
-                }
-            }
+        // Параллакс эффект для фона
+        window.addEventListener('scroll', function() {
+            const parallaxBg = document.querySelector('.parallax-bg');
+            let scrollPosition = window.pageYOffset;
+            parallaxBg.style.transform = 'translateY(' + scrollPosition * 0.5 + 'px)';
         });
 
-        // Did You Know? Facts
-        const facts = [
-            "В 1946 году на школьное образование было выделено 85,6 млн рублей, а в 1950 году - уже 146,5 млн рублей.",
-            "К 1953 году в интернатных учреждениях Казахстана училось около 40 тыс. детей.",
-            "В 1950 году в республике функционировало 9088 общеобразовательных школ с контингентом в 1 млн 439 тысяч учащихся.",
-            "В 1959 году для централизации управления вузами был образован государственный комитет, преобразованный затем в Министерство высшего и среднего специального образования Казахстана.",
-            "В начале 80-х годов общее среднее образование приобрело обязательный характер.",
-            "В 1984 году в школьной реформе внимание сосредоточилось на качестве материально-технической базы, дети стали ходить в 1-й класс с 6 лет.",
-            "Во второй половине XX века в Казахстане преобладали школы с русским языком обучения.",
-            "До 1970 года в Казахстане всеобщее образование было 8-летним.",
-            "Переход к общему среднему образованию начался в 70-е годы XX века.",
-            "О полном осуществлении обязательного общего среднего образования было объявлено в начале 80-х годов.",
-            "Академия наук Казахской ССР была открыта в мае 1946 года на базе Казахского филиала АН СССР.",
-            "Выдающийся ученый Каныш Сатпаев стал первым президентом Академии наук Казахстана.",
-            "К концу 1950 года в системе Академии наук Казахской ССР действовало уже 50 научно-исследовательских учреждений.",
-            "В послевоенные годы ученые Казахстана вышли на передний план мировой науки по математике, механике, квантовой электронике и другим направлениям.",
-            "На рубеже 1970-1980-х гг. были написаны многотомные фундаментальные исследования по истории, филологии, зоологии, ботанике, географии Казахстана."
-        ];
+        // Анимация появления элементов при прокрутке
+        const fadeElements = document.querySelectorAll('.fade-in');
         
-        const factDisplay = document.getElementById('fact-display');
+        const fadeInOnScroll = function() {
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('visible');
+                }
+            });
+        };
+        
+        window.addEventListener('scroll', fadeInOnScroll);
+        
+        // Запускаем один раз при загрузке страницы
+        fadeInOnScroll();
 
-        function showRandomFact() {
-            const randomIndex = Math.floor(Math.random() * facts.length);
-            factDisplay.textContent = facts[randomIndex];
-        }
+        // 3D эффект для секций при наведении
+        const sections = document.querySelectorAll('.section');
+        
+        sections.forEach(section => {
+            section.addEventListener('mousemove', function(e) {
+                const xAxis = (window.innerWidth / 2 - e.pageX) / 25;
+                const yAxis = (window.innerHeight / 2 - e.pageY) / 25;
+                this.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+            });
+            
+            section.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(-10px) rotateX(5deg)';
+            });
+            
+            section.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) rotateX(5deg)';
+            });
+        });
     </script>
 </body>
 </html>
