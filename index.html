@@ -3,537 +3,497 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Казахстан в годы перестройки - Исторический учебник</title>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Marck+Script&family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+    <title>§13. Казахстан на начальном этапе перестройки</title>
+    <!-- Подключение Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Подключение шрифта Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --paper: #f5f1e6;
-            --ink: #2c2416;
-            --accent: #8b4513;
-            --highlight: #d4af37;
-            --shadow: rgba(0, 0, 0, 0.1);
-        }
-
+        /* Базовые стили */
         body {
-            background: linear-gradient(135deg, #e6d5b8 0%, #d1c1a0 100%);
-            color: var(--ink);
-            font-family: 'Caveat', cursive;
-            line-height: 1.6;
-            padding: 20px;
-            min-height: 100vh;
-            background-image: 
-                radial-gradient(circle at 10% 20%, rgba(255,255,255,0.3) 0%, transparent 20%),
-                radial-gradient(circle at 90% 80%, rgba(255,255,255,0.3) 0%, transparent 20%);
+            background-color: #0a0a0a; /* Очень темный фон */
+            color: #e5e5e5; /* Светло-серый текст */
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth; /* Плавная прокрутка */
         }
 
-        .page-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            position: relative;
-        }
-
-        .paper {
-            background-color: var(--paper);
-            border-radius: 3px;
-            box-shadow: 
-                0 0 10px var(--shadow),
-                0 0 20px var(--shadow),
-                inset 0 0 30px rgba(0,0,0,0.05);
-            padding: 40px;
-            margin: 30px 0;
-            position: relative;
-            transform-style: preserve-3d;
-            transition: transform 0.5s ease, box-shadow 0.5s ease;
-            border: 1px solid rgba(0,0,0,0.1);
-        }
-
-        .paper:hover {
-            transform: translateY(-5px) rotateX(2deg);
-            box-shadow: 
-                0 5px 15px var(--shadow),
-                0 15px 30px var(--shadow),
-                inset 0 0 30px rgba(0,0,0,0.05);
-        }
-
-        .paper::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                linear-gradient(90deg, transparent 79px, rgba(210,200,180,0.3) 79px, rgba(210,200,180,0.3) 81px, transparent 81px),
-                linear-gradient(var(--paper) 30px, transparent 30px);
-            background-size: 100% 32px;
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        .hand-drawn-border {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            right: 10px;
-            bottom: 10px;
-            border: 2px solid var(--accent);
-            border-radius: 3px;
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        .content {
-            position: relative;
-            z-index: 1;
-        }
-
-        h1, h2, h3 {
-            font-family: 'Marck Script', cursive;
-            color: var(--accent);
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
-            position: relative;
-            display: inline-block;
-        }
-
-        h1 {
-            font-size: 3.5rem;
-            text-align: center;
-            margin-bottom: 30px;
-            padding-bottom: 15px;
-            border-bottom: 3px double var(--accent);
-            width: 100%;
-        }
-
-        h1::after {
-            content: "";
-            position: absolute;
-            bottom: -5px;
-            left: 20%;
-            right: 20%;
-            height: 2px;
-            background: var(--accent);
-        }
-
-        h2 {
-            font-size: 2.5rem;
-            margin-top: 40px;
-            padding-left: 20px;
-            border-left: 4px solid var(--highlight);
-        }
-
-        h3 {
-            font-size: 2rem;
-            margin-top: 30px;
-            padding-bottom: 5px;
-            border-bottom: 2px dotted var(--accent);
-        }
-
-        p {
-            font-size: 1.4rem;
-            margin-bottom: 20px;
-            text-align: justify;
-        }
-
-        ul, ol {
-            margin-left: 30px;
-            margin-bottom: 20px;
-        }
-
-        li {
-            font-size: 1.4rem;
-            margin-bottom: 10px;
-            position: relative;
-        }
-
-        li::before {
-            content: "•";
-            color: var(--highlight);
-            font-weight: bold;
-            display: inline-block;
-            width: 1em;
-            margin-left: -1em;
-        }
-
-        .keywords-table {
-            width: 100%;
-            border-collapse: separate;
-            border-spacing: 0;
-            margin: 30px 0;
-            border: 2px solid var(--accent);
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 3px 3px 0 var(--shadow);
-            background: rgba(255, 255, 255, 0.5);
-        }
-
-        .keywords-table th, .keywords-table td {
-            padding: 12px 15px;
-            text-align: left;
-            border-bottom: 1px dashed var(--accent);
-            font-size: 1.3rem;
-        }
-
-        .keywords-table th {
-            background: rgba(139, 69, 19, 0.1);
-            color: var(--accent);
-            font-weight: 700;
-            font-family: 'Marck Script', cursive;
-            font-size: 1.5rem;
-        }
-
-        .keywords-table tr:last-child td {
-            border-bottom: none;
-        }
-
-        .assignment-table {
-            width: 100%;
-            border-collapse: separate;
-            border-spacing: 0;
-            margin: 30px 0;
-            border: 2px solid var(--accent);
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 3px 3px 0 var(--shadow);
-            background: rgba(255, 255, 255, 0.5);
-        }
-
-        .assignment-table th, .assignment-table td {
-            padding: 12px 15px;
-            text-align: left;
-            border: 1px dashed var(--accent);
-            font-size: 1.3rem;
-        }
-
-        .assignment-table th {
-            background: rgba(139, 69, 19, 0.1);
-            color: var(--accent);
-            font-weight: 700;
-            font-family: 'Marck Script', cursive;
-            font-size: 1.5rem;
-        }
-
-        .hand-drawn-underline {
-            position: relative;
-            display: inline-block;
-        }
-
-        .hand-drawn-underline::after {
-            content: "";
-            position: absolute;
-            bottom: -3px;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: var(--highlight);
-            transform: skew(-10deg);
-        }
-
-        .ink-blot {
-            position: absolute;
-            width: 100px;
-            height: 80px;
-            background: radial-gradient(ellipse at center, rgba(139,69,19,0.2) 0%, transparent 70%);
-            border-radius: 50%;
-            z-index: 0;
-            opacity: 0.6;
-        }
-
-        .ink-blot-1 {
-            top: 10%;
-            left: 5%;
-            transform: rotate(15deg);
-        }
-
-        .ink-blot-2 {
-            bottom: 15%;
-            right: 8%;
-            transform: rotate(-10deg);
-        }
-
-        .stamp {
-            position: absolute;
-            bottom: 20px;
-            right: 30px;
-            width: 120px;
-            height: 80px;
-            border: 2px dashed var(--accent);
-            border-radius: 5px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Amatic SC', cursive;
-            font-size: 1.8rem;
-            color: var(--accent);
-            transform: rotate(5deg);
-            background: rgba(255,255,255,0.7);
-            box-shadow: 2px 2px 5px var(--shadow);
-        }
-
-        .hand-drawn-line {
-            height: 2px;
-            background: var(--accent);
-            margin: 30px 0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hand-drawn-line::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
-            animation: shimmer 3s infinite;
-        }
-
-        .drawing {
-            width: 100%;
-            height: 200px;
-            margin: 30px 0;
-            background: 
-                radial-gradient(circle at 30% 70%, rgba(139,69,19,0.1) 0%, transparent 50%),
-                radial-gradient(circle at 70% 30%, rgba(139,69,19,0.1) 0%, transparent 50%);
-            border: 2px dashed var(--accent);
-            border-radius: 5px;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Amatic SC', cursive;
-            font-size: 2rem;
-            color: var(--accent);
-        }
-
-        .drawing::before {
-            content: "✎ Историческая зарисовка";
-        }
-
-        .fade-in {
+        /* Стили для элементов, появляющихся при прокрутке */
+        .fade-in-scroll {
             opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 1s ease, transform 1s ease;
+            transform: translateY(40px); /* Начинаются чуть ниже */
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
         }
 
-        .fade-in.visible {
+        .fade-in-scroll.is-visible {
             opacity: 1;
             transform: translateY(0);
         }
 
-        .parallax-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none" stroke="%238b4513" stroke-width="0.5" stroke-dasharray="2,2" opacity="0.1"/></svg>'),
-                linear-gradient(135deg, rgba(230,213,184,0.8) 0%, rgba(209,193,160,0.8) 100%);
-            z-index: -1;
+        /* Секция с эффектом параллакса */
+        .parallax-section {
+            /* Используем абстрактное фоновое изображение. 
+               Вы можете заменить URL на любое другое.
+               Это изображение создаст "советское" или "историческое" настроение. */
+            background-image: url('https://placehold.co/1920x1080/222222/555555?text=1985');
+            background-attachment: fixed; /* Ключевое свойство для параллакса */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 60vh; /* Высота секции параллакса */
+            position: relative;
         }
 
-        @keyframes shimmer {
-            0% { transform: translateX(-100%); }
-            100% { transform: translateX(100%); }
+        /* Плавный градиент для "объемного" текста */
+        .hero-title {
+            background: linear-gradient(145deg, #ffffff 60%, #a0a0a0 90%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        /* Кастомная анимация для заголовка */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            50% { transform: translateY(-10px) rotate(1deg); }
+        .animate-fadeInDown {
+            animation: fadeInDown 1.2s ease-out forwards;
         }
+        
+        .animate-delay-200 { animation-delay: 200ms; }
+        .animate-delay-400 { animation-delay: 400ms; }
 
-        .floating {
-            animation: float 8s ease-in-out infinite;
-        }
-
-        @media (max-width: 768px) {
-            body {
-                padding: 10px;
-            }
-            
-            .paper {
-                padding: 20px;
-            }
-            
-            h1 {
-                font-size: 2.5rem;
-            }
-            
-            h2 {
-                font-size: 2rem;
-            }
-            
-            p, li {
-                font-size: 1.2rem;
-            }
-        }
     </style>
 </head>
-<body>
-    <div class="parallax-bg"></div>
-    
-    <div class="page-container">
-        <div class="paper floating fade-in">
-            <div class="hand-drawn-border"></div>
-            <div class="ink-blot ink-blot-1"></div>
-            <div class="ink-blot ink-blot-2"></div>
+<body class="antialiased">
+
+    <!-- 1. Герой-секция (Первый экран) -->
+    <header class="min-h-screen w-full flex flex-col justify-center items-center text-center p-6">
+        <div class="max-w-4xl">
+            <h2 class="text-xl md:text-2xl font-bold text-red-500 uppercase tracking-widest animate-fadeInDown">
+                РАЗДЕЛ V
+            </h2>
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-black my-4 hero-title animate-fadeInDown animate-delay-200">
+                КАЗАХСТАН В ГОДЫ ПЕРЕСТРОЙКИ
+            </h1>
+            <p class="text-2xl md:text-4xl font-light text-gray-300 animate-fadeInDown animate-delay-400">
+                §13. Казахстан на начальном этапе перестройки (1986–1991)
+            </p>
+        </div>
+        <!-- Иконка прокрутки вниз -->
+        <div class="absolute bottom-10 text-gray-500 animate-bounce">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+            </svg>
+        </div>
+    </header>
+
+    <!-- 2. Основной контент -->
+    <main class="w-full">
+        
+        <!-- Исследовательский вопрос -->
+        <section class="max-w-5xl mx-auto py-24 px-6 text-center">
+            <h2 class="text-4xl md:text-6xl font-bold text-gray-300 leading-tight fade-in-scroll">
+                Распад Советского Союза: <span class="text-white">закономерность или случайность?</span>
+            </h2>
+        </section>
+
+        <!-- На этом уроке -->
+        <section class="max-w-4xl mx-auto py-24 px-6">
+            <h3 class="text-3xl md:text-4xl font-bold text-white mb-8 fade-in-scroll">На этом уроке:</h3>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gray-900 p-8 rounded-2xl border border-gray-800 fade-in-scroll">
+                    <p class="text-xl text-gray-300">Объясним особенности общественно-политической жизни, дадим собственную интерпретацию.</p>
+                </div>
+                <div class="bg-gray-900 p-8 rounded-2xl border border-gray-800 fade-in-scroll" style="transition-delay: 200ms;">
+                    <p class="text-xl text-gray-300">Проанализируем социально-экономические проблемы, имевшие место в конце XX века.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ключевые слова и Пленум -->
+        <section class="max-w-4xl mx-auto py-24 px-6">
+            <h3 class="text-3xl md:text-4xl font-bold text-white mb-8 fade-in-scroll">Ключевые слова</h3>
             
-            <div class="content">
-                <h1>РАЗДЕЛ V</h1>
-                <h2>КАЗАХСТАН В ГОДЫ ПЕРЕСТРОЙКИ<br>(1986–1991 годы)</h2>
-                
-                <div class="hand-drawn-line"></div>
-                
-                <h3>§13. Казахстан на начальном этапе перестройки</h3>
-                
-                <p><strong class="hand-drawn-underline">Исследовательский вопрос</strong>: Распад Советского Союза: закономерность или случайность?</p>
-                
-                <h3>На этом уроке:</h3>
-                <ul>
-                    <li>Объясним особенности общественно-политической жизни, дадим собственную интерпретацию.</li>
-                    <li>Проанализируем социально-экономические проблемы, имевшие место в конце XX века.</li>
-                </ul>
-                
-                <h3>Ключевые слова:</h3>
-                <table class="keywords-table">
-                    <tr>
-                        <th>Русский</th>
-                        <th>Английский</th>
-                    </tr>
-                    <tr>
-                        <td>XXVII съезд КПСС;</td>
-                        <td>XXVII congress of the CPSU;</td>
-                    </tr>
-                    <tr>
-                        <td>ускорение социально-экономического развития;</td>
-                        <td>acceleration of socio-economic development;</td>
-                    </tr>
-                    <tr>
-                        <td>обновление общества;</td>
-                        <td>social modernization;</td>
-                    </tr>
-                    <tr>
-                        <td>меры демократизации;</td>
-                        <td>democratization measures;</td>
-                    </tr>
-                    <tr>
-                        <td>пленум;</td>
-                        <td>plenum;</td>
-                    </tr>
-                    <tr>
-                        <td>кадровая политика</td>
-                        <td>human resources policy</td>
-                    </tr>
+            <!-- Таблица -->
+            <div class="overflow-x-auto fade-in-scroll">
+                <table class="w-full min-w-full text-left bg-gray-900 rounded-lg overflow-hidden border border-gray-800">
+                    <thead class="bg-gray-800 text-gray-300 uppercase text-sm">
+                        <tr>
+                            <th class="py-4 px-6">Русский</th>
+                            <th class="py-4 px-6">Английский</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-400">
+                        <tr class="border-b border-gray-800">
+                            <td class="py-4 px-6">– XXVII съезд КПСС;</td>
+                            <td class="py-4 px-6">– XXVII congress of the CPSU;</td>
+                        </tr>
+                        <tr class="border-b border-gray-800">
+                            <td class="py-4 px-6">– ускорение социально-экономического развития;</td>
+                            <td class="py-4 px-6">– acceleration of socio-economic development;</td>
+                        </tr>
+                        <tr class="border-b border-gray-800">
+                            <td class="py-4 px-6">– обновление общества;</td>
+                            <td class="py-4 px-6">– social modernization;</td>
+                        </tr>
+                        <tr class="border-b border-gray-800">
+                            <td class="py-4 px-6">– меры демократизации;</td>
+                            <td class="py-4 px-6">– democratization measures;</td>
+                        </tr>
+                        <tr class="border-b border-gray-800">
+                            <td class="py-4 px-6">– пленум;</td>
+                            <td class="py-4 px-6">– plenum;</td>
+                        </tr>
+                        <tr>
+                            <td class="py-4 px-6">– кадровая политика</td>
+                            <td class="py-4 px-6">– human resources policy</td>
+                        </tr>
+                    </tbody>
                 </table>
-                
-                <p><strong>Пленум</strong> (лат. plenum – полный) – 1) собрание в полном составе членов выборного руководящего органа какой-либо организации; 2) заседание всех членов органов Верховного суда.</p>
-                
-                <h3>ИНТЕГРАЦИЯ:</h3>
-                <p>по предмету география – экономическая география. Социально-экономические ресурсы. По всемирной истории – биполярный мир. Гонка вооружений. Основные события «холодной войны». Причины неудачи реформирования советской экономики. По основам права – правовое государство и гражданское общество. Права и свободы человека и гражданина.</p>
-                
-                <div class="stamp">ИСТОРИЯ КАЗАХСТАНА</div>
             </div>
-        </div>
 
-        <div class="paper floating fade-in">
-            <div class="hand-drawn-border"></div>
-            <div class="content">
-                <h2>Изменения в общественно-экономической жизни страны в 80-е годы XX века</h2>
-                
-                <div class="drawing"></div>
-                
-                <p>К началу 80-х годов практически во всех республиках Советского Союза сложилось тяжелое социально-экономическое положение. Политическая организация общества, не оправдавшая себя система экономических отношений вплотную поставили страну перед серьезным кризисом. В марте 1985 года лидером Коммунистической партии и Советского государства стал М. С. Горбачев. На состоявшемся в апреле 1985 г. Пленуме ЦК КПСС была предпринята попытка по-новому рассмотреть вопросы социально-экономической жизни. Был провозглашен курс на ускорение социально-экономического развития. Политруководство планировало провести ускоренное развитие без снижения темпов экономического роста и за счет сосредоточения основных усилий в данном направлении.</p>
-                
-                <p>Взятый курс был одобрен в ходе состоявшегося в феврале 1986 года XXVII съезда КПСС. Партия объявляла себя реальной силой, способной повести за собой общество по пути обновления. В эти годы все еще сохранялись применение прежних способов решения многих сложных проблем общественно-экономической жизни. Поэтому апрельский Пленум (1985), взявший курс на ускорение социально-экономического развития, как и последующие пленумы и съезды КПСС, не могли спасти и не спасли Советский Союз от назревающего глубокого кризиса.</p>
-                
-                <p>Последующие события показали, что курс на ускорение принимался без четкой и ясной программы, обдуманных научных концепций. На январском Пленуме ЦК КПСС (1987), который рассматривал проблему «О перестройке и кадровой политике партии», было объявлено, что главной целью партии и всего общества является перестройка. Перестройка, как и курс на ускорение, привела лишь к торжеству таких механических лозунгов, как «да здравствует демократия», «да здравствует законность и порядок» и др. Между тем застой в народном хозяйстве был следствием противоречий и ошибок командно-административной системы.</p>
-                
-                <p>Начатый с апреля 1985 года исторический перелом нелегко давался и воспитанных на коммунистическом духе людях. Процесс ревизии и реконструкции в Казахстане столкнулся со многими проблемами и препятствиями как и в других регионах страны.</p>
+            <!-- Определение -->
+            <div class="mt-8 bg-gray-800 border border-gray-700 p-6 rounded-lg text-gray-300 text-lg fade-in-scroll">
+                <strong class="text-white">Пленум (лат. plenum – полный)</strong> – 1) собрание в полном составе членов выборного руководящего органа какой-либо организации; 2) заседание всех членов органов Верховного суда.
             </div>
-        </div>
+        </section>
 
-        <div class="paper floating fade-in">
-            <div class="hand-drawn-border"></div>
-            <div class="content">
-                <h2>Вопросы и задания</h2>
+        <!-- Интеграция и Вспомните -->
+        <section class="max-w-4xl mx-auto py-24 px-6 space-y-8">
+            <div class="bg-blue-900/20 border border-blue-700 p-8 rounded-2xl fade-in-scroll">
+                <h4 class="text-2xl font-bold text-blue-300 mb-4">ИНТЕГРАЦИЯ:</h4>
+                <p class="text-lg text-blue-200">По предмету география – экономическая география. Социально-экономические ресурсы. По всемирной истории – биполярный мир. Гонка вооружений. Основные события «холодной войны». Причины неудачи реформирования советской экономики. По основам права – правовое государство и гражданское общество. Права и свободы человека и гражданина.</p>
+            </div>
+            <div class="bg-gray-800 border border-gray-700 p-8 rounded-2xl fade-in-scroll">
+                <h4 class="text-2xl font-bold text-gray-300 mb-4">ВСПОМНИТЕ:</h4>
+                <p class="text-lg text-gray-400">Особенности общественно-политической жизни в послевоенные годы. Казахстан в период «оттепели» (1954–1964 гг.). Общественно-политическая жизнь республики в 1954–1965 гг.</p>
+            </div>
+        </section>
+        
+        <!-- Секция Параллакса (Визуальный разделитель) -->
+        <section class="parallax-section"></section>
+
+        <!-- НОВАЯ СЕКЦИЯ: ХРОНОЛОГИЯ -->
+        <section class="max-w-4xl mx-auto py-24 px-6">
+            <h2 class="text-3xl md:text-5xl font-bold text-white mb-16 text-center fade-in-scroll">
+                Ключевая Хронология
+            </h2>
+            
+            <div class="relative">
+                <!-- Вертикальная линия -->
+                <div class="absolute top-0 bottom-0 w-1 bg-gray-700 left-4 md:left-1/2 md:-translate-x-1/2" aria-hidden="true"></div>
                 
-                <h3>Вопросы:</h3>
-                <ul>
+                <!-- Элемент 1: Март 1985 -->
+                <div class="relative mb-12 fade-in-scroll">
+                    <!-- Точка на линии -->
+                    <div class="absolute w-5 h-5 bg-red-500 rounded-full left-4 md:left-1/2 top-1 transform -translate-x-1/2 border-4 border-gray-800"></div>
+                    <!-- Контент (моб: справа, десктоп: слева) -->
+                    <div class="ml-12 md:ml-0 md:w-1/2 md:pr-12 md:text-right">
+                        <div class="bg-gray-900 p-6 rounded-2xl border border-gray-800">
+                            <p class="text-sm text-red-400 font-semibold">Март 1985</p>
+                            <h4 class="text-xl font-bold text-white mt-1">Новый лидер</h4>
+                            <p class="text-gray-400 mt-2">М. С. Горбачев становится лидером Коммунистической партии и Советского государства.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Элемент 2: Апрель 1985 -->
+                <div class="relative mb-12 fade-in-scroll" style="transition-delay: 100ms;">
+                    <!-- Точка на линии -->
+                    <div class="absolute w-5 h-5 bg-red-500 rounded-full left-4 md:left-1/2 top-1 transform -translate-x-1/2 border-4 border-gray-800"></div>
+                    <!-- Контент (моб: справа, десктоп: справа) -->
+                    <div class="ml-12 md:w-1/2 md:ml-auto md:pl-12">
+                         <div class="bg-gray-900 p-6 rounded-2xl border border-gray-800">
+                            <p class="text-sm text-red-400 font-semibold">Апрель 1985</p>
+                            <h4 class="text-xl font-bold text-white mt-1">Апрельский Пленум</h4>
+                            <p class="text-gray-400 mt-2">Провозглашен курс на "ускорение социально-экономического развития".</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Элемент 3: Февраль 1986 -->
+                <div class="relative mb-12 fade-in-scroll" style="transition-delay: 200ms;">
+                    <!-- Точка на линии -->
+                    <div class="absolute w-5 h-5 bg-red-500 rounded-full left-4 md:left-1/2 top-1 transform -translate-x-1/2 border-4 border-gray-800"></div>
+                    <!-- Контент (моб: справа, десктоп: слева) -->
+                    <div class="ml-12 md:ml-0 md:w-1/2 md:pr-12 md:text-right">
+                        <div class="bg-gray-900 p-6 rounded-2xl border border-gray-800">
+                            <p class="text-sm text-red-400 font-semibold">Февраль 1986</p>
+                            <h4 class="text-xl font-bold text-white mt-1">XXVII съезд КПСС</h4>
+                            <p class="text-gray-400 mt-2">Взятый курс на ускорение был одобрен.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Элемент 4: Январь 1987 -->
+                <div class="relative mb-12 fade-in-scroll" style="transition-delay: 300ms;">
+                    <!-- Точка на линии -->
+                    <div class="absolute w-5 h-5 bg-red-500 rounded-full left-4 md:left-1/2 top-1 transform -translate-x-1/2 border-4 border-gray-800"></div>
+                    <!-- Контент (моб: справа, десктоп: справа) -->
+                    <div class="ml-12 md:w-1/2 md:ml-auto md:pl-12">
+                         <div class="bg-gray-900 p-6 rounded-2xl border border-gray-800">
+                            <p class="text-sm text-red-400 font-semibold">Январь 1987</p>
+                            <h4 class="text-xl font-bold text-white mt-1">Январский Пленум</h4>
+                            <p class="text-gray-400 mt-2">"Перестройка" объявлена главной целью общества.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- НОВАЯ СЕКЦИЯ: ИНФОГРАФИКА "ПРИЗНАКИ КРИЗИСА" -->
+        <section class="max-w-6xl mx-auto py-24 px-6">
+            <h2 class="text-3xl md:text-5xl font-bold text-white mb-16 text-center fade-in-scroll">
+                Признаки Кризиса 80-х
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- Карточка 1: Политика -->
+                <div class="bg-gray-900 p-8 rounded-2xl border border-gray-800 flex flex-col items-center text-center fade-in-scroll" style="transition-delay: 0ms;">
+                    <!-- Иконка -->
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-16 h-16 text-red-500 mb-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h12A2.25 2.25 0 0 0 20.25 14.25V3M3.75 3H20.25M3.75 3v.0083C3.75 3.454 4.196 3.84 4.688 3.84h14.624c.492 0 .938-.386.938-.832V3" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M3.75 21v-3.375c0-.621.504-1.125 1.125-1.125h14.25c.621 0 1.125.504 1.125 1.125V21" />
+                    </svg>
+                    <h3 class="text-2xl font-bold text-white mb-3">Политический застой</h3>
+                    <p class="text-gray-400">Командно-административная система не справлялась. Старые методы решения проблем не работали.</p>
+                </div>
+
+                <!-- Карточка 2: Экономика -->
+                <div class="bg-gray-900 p-8 rounded-2xl border border-gray-800 flex flex-col items-center text-center fade-in-scroll" style="transition-delay: 200ms;">
+                    <!-- Иконка -->
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-16 h-16 text-red-500 mb-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.518 5.518-3.56-3.56-5.814 5.518" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 3v1.5M3 21v-1.5m18 1.5v-1.5m-18 0h18" />
+                    </svg>
+                    <h3 class="text-2xl font-bold text-white mb-3">Экономический кризис</h3>
+                    <p class="text-gray-400">Тяжелое социально-экономическое положение. Застой в народном хозяйстве. Отсталость машиностроения.</p>
+                </div>
+                
+                <!-- Карточка 3: Общество -->
+                <div class="bg-gray-900 p-8 rounded-2xl border border-gray-800 flex flex-col items-center text-center fade-in-scroll" style="transition-delay: 400ms;">
+                    <!-- Иконка -->
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-16 h-16 text-red-500 mb-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.037 9.037 0 0 0-3.031.962l-1.14.379m-1.14-.379a9.037 9.037 0 0 1-3.031.962M3.75 18.72v-3.031a9.037 9.037 0 0 1 .962-3.031l.379-1.14M3.75 15.689v.001M12 12.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0m0 0a9.037 9.037 0 0 0 3.031.962l1.14.379m-1.14-.379a9.037 9.037 0 0 1 3.031.962m0-3.031a9.037 9.037 0 0 0-3.031-.962l-1.14-.379M12 12.75a3 3 0 1 1 6 0 3 3 0 0 1-6 0m0 0a9.037 9.037 0 0 1-3.031-.962l-1.14-.379" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm3.75 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-3.75 8.25a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
+                    </svg>
+                    <h3 class="text-2xl font-bold text-white mb-3">Социальные проблемы</h3>
+                    <p class="text-gray-400">Необходимость обновления социальной жизни. Старые лозунги "демократии" и "законности" без реальных дел.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Основной текст -->
+        <section class="max-w-4xl mx-auto py-24 px-6">
+            <h2 class="text-3xl md:text-5xl font-bold text-white mb-10 fade-in-scroll">Изменения в общественно-экономической жизни страны в 80-е годы XX века.</h2>
+            
+            <div class="space-y-6 text-xl md:text-2xl text-gray-300 leading-relaxed">
+                <p class="fade-in-scroll">
+                    К началу 80-х годов практически во всех республиках Советского Союза сложилось тяжелое социально-экономическое положение. Политическая организация общества, не оправдавшая себя система экономических отношений вплотную поставили страну перед серьезным кризисом. В марте 1985 года лидером Коммунистической партии и Советского государства стал М. С. Горбачев.
+                </p>
+                <p class="fade-in-scroll">
+                    На состоявшемся в апреле 1985 г. Пленуме ЦК КПСС была предпринята попытка по-новому рассмотреть вопросы социально-экономической жизни. Был провозглашен курс на <strong class="text-white">ускорение социально-экономического развития.</strong> Политруководство планировало провести ускоренное развитие без снижения темпов экономического роста и за счет сосредоточения основных усилий в данном направлении.
+                </p>
+                <p class="fade-in-scroll">
+                    Взятый курс был одобрен в ходе состоявшегося в феврале 1986 года XXVII съезда КПСС. Партия объявляла себя реальной силой, способной повести за собой общество по пути обновления. В эти годы все еще сохранялись применение прежних способов решения многих сложных проблем общественно-экономической жизни. Поэтому апрельский Пленум (1985), взявший курс на ускорение социально-экономического развития, как и последующие пленумы и съезды КПСС, <strong class="text-red-400">не могли спасти и не спасли</strong> Советский Союз от назревающего глубокого кризиса.
+                </p>
+                <p class="fade-in-scroll">
+                    Последующие события показали, что курс на ускорение принимался <strong class="text-white">без четкой и ясной программы, обдуманных научных концепций.</strong> На январском Пленуме ЦК КПСС (1987), который рассматривал проблему «О перестройке и кадровой политике партии», было объявлено, что главной целью партии и всего общества является перестройка. Перестройка, как и курс на ускорение, привела лишь к торжеству таких механических лозунгов, как «да здравствует демократия», «да здравствует законность и порядок» и др. Между тем застой в народном хозяйстве был следствием противоречий и ошибок командно-административной системы.
+                </p>
+                <p class="fade-in-scroll">
+                    Начатый с апреля 1985 года исторический перелом нелегко давался и воспитанных на коммунистическом духе людях. Процесс ревизии и реконструкции в Казахстане столкнулся со многими проблемами и препятствиями как и в других регионах страны.
+                </p>
+            </div>
+        </section>
+
+        <!-- НОВАЯ СЕКЦИЯ: ИНФОГРАФИКА "ПЛАН vs. РЕАЛЬНОСТЬ" -->
+        <section class="max-w-4xl mx-auto py-24 px-6">
+            <h2 class="text-3xl md:text-5xl font-bold text-white mb-16 text-center fade-in-scroll">
+                "Ускорение": План против Реальности
+            </h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                
+                <!-- Карточка 1: ПЛАН -->
+                <div class="bg-blue-900/20 border border-blue-700 p-8 rounded-2xl flex flex-col items-center text-center fade-in-scroll" style="transition-delay: 0ms;">
+                    <!-- Иконка -->
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-16 h-16 text-blue-300 mb-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 0 1-5.83 1.48m1.54-5.63a5.96 5.96 0 0 0-5.83 1.48m5.83-1.48l-1.54 5.63m1.54-5.63a5.96 5.96 0 0 1 5.83 1.48m-5.83-1.48L9.75 16.13m0 0a5.96 5.96 0 0 1-5.83-1.48m5.83 1.48L9.75 8.75m0 7.38l-1.54-5.63m9.43 1.48a5.96 5.96 0 0 0-5.83-1.48m5.83 1.48L15.25 8.75m0 7.38l1.54-5.63m0 0l-5.83 1.48" />
+                    </svg>
+                    <h3 class="text-2xl font-bold text-white mb-3">План: "Ускорение"</h3>
+                    <ul class="text-gray-300 text-lg space-y-2 text-left list-disc list-inside">
+                        <li>Решить проблемы машиностроения.</li>
+                        <li>Повысить темпы экономики.</li>
+                        <li>Улучшить бытовые условия.</li>
+                        <li>Стимулировать новые формы труда.</li>
+                    </ul>
+                </div>
+
+                <!-- Карточка 2: РЕАЛЬНОСТЬ -->
+                <div class="bg-red-900/20 border border-red-700 p-8 rounded-2xl flex flex-col items-center text-center fade-in-scroll" style="transition-delay: 200ms;">
+                    <!-- Иконка -->
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-16 h-16 text-red-400 mb-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                    </svg>
+                    <h3 class="text-2xl font-bold text-white mb-3">Реальность: Провал</h3>
+                     <ul class="text-gray-300 text-lg space-y-2 text-left list-disc list-inside">
+                        <li>Без четкой и ясной программы.</li>
+                        <li>Без научных концепций.</li>
+                        <li>Применение старых способов.</li>
+                        <li>Не спасли страну от кризиса.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- НОВАЯ СЕКЦИЯ: ИНФОГРАФИКА "ЛОЗУНГИ vs. ЗАСТОЙ" -->
+        <section class="max-w-4xl mx-auto pt-12 pb-24 px-6">
+             <h2 class="text-3xl md:text-5xl font-bold text-white mb-16 text-center fade-in-scroll">
+                Результат "Перестройки"
+            </h2>
+            <div class="bg-gray-900 p-8 rounded-2xl border border-gray-800 fade-in-scroll">
+                <div class="grid md:grid-cols-3 gap-6 items-center">
+                    
+                    <div class="text-center md:text-left">
+                        <h4 class="text-xl font-bold text-white">Механические лозунги:</h4>
+                        <p class="text-gray-400 text-lg">"Да здравствует демократия!"</p>
+                        <p class="text-gray-400 text-lg">"Да здравствует законность!"</p>
+                    </div>
+                    
+                    <div class="flex justify-center text-red-500">
+                        <!-- Иконка-стрелка, на мобильных будет вертикальной, на десктопе - горизонтальной -->
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-16 h-16 transform rotate-90 md:rotate-0">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                        </svg>
+                    </div>
+
+                    <div class="text-center md:text-right">
+                        <h4 class="text-xl font-bold text-white">Реальный результат:</h4>
+                        <p class="text-gray-400 text-lg">Застой в народном хозяйстве.</p>
+                        <p class="text-gray-400 text-lg">Ошибки командной системы.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Вопросы и Задания -->
+        <section class="max-w-4xl mx-auto py-24 px-6">
+            <h2 class="text-3xl md:text-5xl font-bold text-white mb-10 fade-in-scroll">Вопросы и Задания</h2>
+
+            <!-- Вопросы -->
+            <div class="mb-16 fade-in-scroll">
+                <ul class="space-y-4 text-xl text-gray-300 list-disc list-inside">
                     <li>На каком пленуме ЦК КПСС был объявлен курс на ускорение социально-экономического развития?</li>
                     <li>Каково было социально-экономическое положение Казахстана в 80-е годы?</li>
                     <li>Что явилось источником торможения для обновления общества?</li>
                 </ul>
-                
-                <h3>Задание 1.</h3>
-                <p>Определите и сделайте заключение о расхождениях в словах и делах в годы застоя, заполните сравнительную таблицу.</p>
-                
-                <table class="assignment-table">
-                    <tr>
-                        <th>В политике</th>
-                        <th>В социальной сфере</th>
-                        <th>Итоги</th>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </table>
-                
-                <h3>Задание 2. Работа с документом.</h3>
-                <ul>
+            </div>
+            
+            <!-- Задание 1 -->
+            <div class="bg-gray-900 p-8 rounded-2xl border border-gray-800 mb-8 fade-in-scroll">
+                <h3 class="text-2xl font-bold text-white mb-4">Задание 1.</h3>
+                <p class="text-lg text-gray-300 mb-6">Определите и сделайте заключение о расхождениях в словах и делах в годы застоя, заполните сравнительную таблицу.</p>
+                <div class="overflow-x-auto">
+                    <table class="w-full min-w-full text-left border border-gray-700">
+                        <thead class="bg-gray-800 text-gray-300">
+                            <tr>
+                                <th class="py-3 px-4 border-b border-gray-700">В политике</th>
+                                <th class="py-3 px-4 border-b border-gray-700">В социальной сфере</th>
+                                <th class="py-3 px-4 border-b border-gray-700">Итоги</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-gray-900">
+                                <td class="py-4 px-4 h-24 border-r border-gray-700">&nbsp;</td>
+                                <td class="py-4 px-4 h-24 border-r border-gray-700">&nbsp;</td>
+                                <td class="py-4 px-4 h-24">&nbsp;</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Задание 2 -->
+            <div class="bg-gray-900 p-8 rounded-2xl border border-gray-800 fade-in-scroll">
+                <h3 class="text-2xl font-bold text-white mb-4">Задание 2. Работа с документом.</h3>
+                <ul class="space-y-4 text-xl text-gray-300 list-disc list-inside">
                     <li>Почему не был выполнен курс на ускорение социально-экономического развития, озвученный на апрельском Пленуме ЦК КПСС?</li>
                     <li>Каковы причины начала периода «перестройки»?</li>
                     <li>Каковы признаки (политические, экономические, социальные) кризиса 80-х годов?</li>
                     <li>Выскажите свои мысли по решению проблем 80-х годов XX века, используя факты и источники.</li>
                 </ul>
             </div>
-        </div>
-    </div>
+        </section>
 
-    <script>
-        // Анимация появления элементов при прокрутке
-        const fadeElements = document.querySelectorAll('.fade-in');
-        
-        const fadeInOnScroll = function() {
-            fadeElements.forEach(element => {
-                const elementTop = element.getBoundingClientRect().top;
-                const elementVisible = 150;
+        <!-- Фактологический материал -->
+        <section class="w-full bg-gray-900 py-24">
+            <div class="max-w-4xl mx-auto px-6">
+                <h2 class="text-3xl md:text-5xl font-bold text-white mb-10 fade-in-scroll">Фактологический материал (документ)</h2>
+                <h3 class="text-2xl md:text-3xl font-bold text-red-400 mb-6 fade-in-scroll">Апрель 1985 года – Пленум ЦК КПСС и начало перестройки</h3>
                 
-                if (elementTop < window.innerHeight - elementVisible) {
-                    element.classList.add('visible');
-                }
-            });
-        };
-        
-        window.addEventListener('scroll', fadeInOnScroll);
-        window.addEventListener('load', fadeInOnScroll);
-        
-        // Параллакс эффект для фона
-        window.addEventListener('scroll', function() {
-            const parallaxBg = document.querySelector('.parallax-bg');
-            let scrollPosition = window.pageYOffset;
-            parallaxBg.style.transform = 'translateY(' + scrollPosition * 0.5 + 'px)';
-        });
+                <div class="prose prose-xl prose-invert text-gray-300 space-y-6 leading-relaxed">
+                    <p class="fade-in-scroll">
+                        В середине 80-х годов Советский Союз стоял перед экономическим, социальным и политическим кризисом. Назрела необходимость полного обновления общества – его экономических основ, социальной жизни, политической структуры, духовной сферы. Однако недостаточно были разъяснены пути, формы, глубина обновлений. Сформировавшиеся экономические формы, организационно-политическая структура общества препятствовали решению назревших противоречий. СССР нуждался в новой концепции развития.
+                    </p>
+                    <p class="fade-in-scroll">
+                        11 марта 1985 года состоялся внеочередной Пленум ЦК КПСС, на котором рассматривался вопрос избрания Генерального секретаря ЦК КПСС. Немного спустя апрельский Пленум ЦК КПСС, прошедший в апреле 1985 года, пересмотрел многие проблемы общественно-экономической жизни. Был объявлен курс на ускорение социально-экономического развития СССР. Политическое руководство страны предположило, что через ликвидацию отсталости отечественного машиностроения можно решить многие проблемы, повысить темпы экономического развития. За короткие сроки, сосредоточивая в этом направлении все усилия, предполагалось вывести советскую экономику на новые рубежи, затем улучшить социальные факторы, а именно – бытовые условия советских людей. Более того, рассматривались совершенствование структуры управления народным хозяйством, стимулирование новых форм труда. Таким образом, многие сложные проблемы общественно-экономической жизни, как и прежде, решались с помощью старых воззрений.
+                    </p>
+                    <p class="fade-in-scroll">
+                        Курс на ускорение социально-экономического развития проводился без четких и ясных программ, научно обоснованных концепций. Поэтому понять, почему решения апрельского Пленума ЦК КПСС не смогли вывести страну из нависшего кризиса. Вина за неудачное окончание курса на ускорение легла на плечи отдельных руководителей-коммунистов.
+                    </p>
+                    <p class="fade-in-scroll">
+                        Выступая на апрельском Пленуме ЦК КПСС, Генсек М. С. Горбачев внес новые элементы оценки ситуации в мире.
+                    </p>
+                    <p class="text-sm text-gray-500 fade-in-scroll">
+                       
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
 
-        // Добавляем эффект "дрожания" для рисованных элементов
-        document.querySelectorAll('.hand-drawn-border, .stamp').forEach(el => {
-            el.addEventListener('mouseenter', function() {
-                this.style.transform = 'rotate(1deg)';
+    <!-- Футер -->
+    <footer class="text-center py-12 px-6">
+        <p class="text-gray-600">Ренард</p>
+    </footer>
+
+
+    <!-- JavaScript для анимаций -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const elements = document.querySelectorAll('.fade-in-scroll');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        // Опционально: прекратить наблюдение после появления
+                        // observer.unobserve(entry.target); 
+                    } else {
+                         // Опционально: убирать класс, чтобы анимация повторялась
+                         // entry.target.classList.remove('is-visible');
+                    }
+                });
+            }, {
+                threshold: 0.1 // Анимация начнется, когда 10% элемента видно
             });
-            
-            el.addEventListener('mouseleave', function() {
-                this.style.transform = 'rotate(0deg)';
+
+            elements.forEach(el => {
+                observer.observe(el);
             });
         });
     </script>
+
 </body>
 </html>
